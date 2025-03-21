@@ -1,0 +1,30 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Checkout') {
+            steps {
+                // Checkout the code from the repository
+                checkout scm
+            }
+        }
+        stage('Build') {
+            steps {
+                // No build steps required for HTML/CSS
+                echo 'Build stage - nothing to build for HTML/CSS'
+            }
+        }
+        stage('Test') {
+            steps {
+                // No test steps required for HTML/CSS
+                echo 'Test stage - nothing to test for HTML/CSS'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                // Deploy the HTML page to a web server (this is just an example)
+                echo 'Deploy stage - deploying HTML/CSS to web server'
+            }
+        }
+    }
+}
